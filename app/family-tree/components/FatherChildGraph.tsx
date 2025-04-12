@@ -69,9 +69,15 @@ const FatherChildGraph = ({ data }: any) => {
   return (
     <div
       style={{ width: "100%", height: "100vh" }}
-      className="bg-gradient-to-br from-[#e0f7fa] to-[#e8f5e9]"
+      className="bg-[url('/bg.svg')] bg-no-repeat bg-center bg-cover"
     >
-      <ReactFlow nodes={nodes} edges={edges} nodeTypes={nodeTypes}></ReactFlow>
+      <div className="bg-white/20 backdrop-blur-sm w-full h-full">
+        <ReactFlow
+          nodes={nodes}
+          edges={edges}
+          nodeTypes={nodeTypes}
+        ></ReactFlow>
+      </div>
     </div>
   );
 };

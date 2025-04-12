@@ -22,10 +22,10 @@
 }
 
 input {
-  @apply w-full rounded-lg border border-[#d1f8d4] text-gray-800 px-2 py-2.5 md:px-3 gap-2.5 focus:ring-0 focus:border-[#e8f5e9] placeholder:text-gray-500 outline-none appearance-none focus:outline-none focus:shadow-sm shadow-[#e8f5e9];
+  @apply w-full rounded-lg border border-[#7ace82] text-[#00720b] px-2 py-2.5 md:px-3 gap-2.5 focus:ring-0 focus:border-[#3ca144] placeholder:text-green-700 outline-none appearance-none focus:outline-none focus:shadow-sm shadow-[#e8f5e9];
 }
 
 select,
 textarea {
-  @apply w-full rounded-lg border border-[#d1f8d4] text-gray-500 px-2 py-2.5 md:px-3 gap-2.5 focus:ring-0 focus:border-[#e8f5e9] placeholder:text-gray-500 outline-none focus:outline-none shadow-none appearance-none focus:shadow-sm shadow-[#e8f5e9];
+  @apply w-full rounded-lg border border-[#7ace82] text-[#00720b] px-2 py-2.5 md:px-3 gap-2.5 focus:ring-0 focus:border-[#3ca144] placeholder:text-green-700 outline-none focus:outline-none shadow-none appearance-none focus:shadow-sm shadow-[#e8f5e9];
 }
