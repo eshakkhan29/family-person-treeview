@@ -67,9 +67,9 @@ export const GET = async (req: NextRequest) => {
     );
 
     // Create new object without siblingOf
-    const { siblingOf, ...rest } = person;
+
     const formattedPerson = {
-      ...rest,
+      ...person,
       siblings: uniqueSiblings,
     };
 
