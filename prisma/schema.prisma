@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Person {
+  id                Int     @id @unique @default(autoincrement())
+  name              String
+  phone             String  @unique
+  age               Int?
+  gender            Gender
+  mother            String?
+  profession        String?
+  nid_number        Int?
+  present_address   String?
+  permanent_address String?
+
+  // Parent relationships
+  fatherId Int?
+  father   Person? @relation("FatherRelation", fields: [fatherId], references: [id])
+
+  // Children relationships (these Persons consider this Person their father or mother)
+  children Person[] @relation("FatherRelation")
+
+  // Sibling relationship (many-to-many)
+  siblings  Person[] @relation("SiblingRelation")
+  siblingOf Person[] @relation("SiblingRelation")
+}
+
+enum Gender {
+  Male
+  Female
+}
